@@ -8,6 +8,14 @@ class green::powertop inherits green {
       }
     }
 
+    if $green::powertop_autotune {
+      exec { 'powertop_autotune':
+        command => 'powertop --auto-tune',
+        path    => ['/usr/bin', '/usr/sbin',],
+        returns => [0,1]
+      }
+    } 
+
     if $green::powertop_service_manage == true {
       service { 'green':
         ensure     => $green::powertop_service_ensure,

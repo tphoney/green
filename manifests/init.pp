@@ -13,6 +13,7 @@
 # @param service_provider [String] Which service provider to use for Powertop. Default value: 'undef'.
 class green (
   Boolean $powertop_enable,
+  Boolean $powertop_autotune,
   String $powertop_package_ensure,
   Boolean $powertop_package_manage,
   Array[String] $powertop_package_name,

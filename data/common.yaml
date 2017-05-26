@@ -1,5 +1,6 @@
 ---
 green::powertop_enable: true
+green::powertop_autotune: true
 green::powertop_package_ensure: present
 green::powertop_package_manage: true
 green::powertop_package_name: [ 'powertop' ]
