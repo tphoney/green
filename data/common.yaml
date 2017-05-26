@@ -1,0 +1,10 @@
+---
+green::powertop_enable: true
+green::powertop_package_ensure: present
+green::powertop_package_manage: true
+green::powertop_package_name: [ 'powertop' ]
+green::powertop_service_enable: false
+green::powertop_service_ensure: running
+green::powertop_service_manage: false
+green::powertop_service_name: powertop
+green::powertop_service_provider: ~
