@@ -22,8 +22,14 @@ class green (
   Boolean $powertop_service_manage,
   String $powertop_service_name,
   Optional[String] $powertop_service_provider,
+  Boolean $disk_enable,
+  Boolean $disk_all_disks,
+  Hash[String, Integer] $disk_hash,
+  Integer $disk_spindown,
 ) {
 
+  # only if linux
   contain green::powertop
-
+  # windows and linux
+  contain green::disk
 }

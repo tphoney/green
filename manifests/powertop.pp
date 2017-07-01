@@ -14,7 +14,7 @@ class green::powertop inherits green {
         path    => ['/usr/bin', '/usr/sbin',],
         returns => [0,1]
       }
-    } 
+    }
 
     if $green::powertop_service_manage == true {
       service { 'green':
