@@ -9,3 +9,7 @@ green::powertop_service_ensure: running
 green::powertop_service_manage: false
 green::powertop_service_name: powertop
 green::powertop_service_provider: ~
+green::disk_enable: true
+green::disk_all_disks: true
+green::disk_spindown: 60
+green::disk_hash: {}
