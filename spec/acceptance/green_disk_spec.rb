@@ -1,18 +1,24 @@
 require 'spec_helper_acceptance'
 
-powertop_packagename = 'powertop'
-powertop_servicename = 'powertop'
-
-describe 'green::powertop class', :unless => UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) do
-  it 'installs the package' do
-    apply_manifest(%{
-      class { 'green': }
-    }, :catch_failures => true)
+describe 'green::disk class', :unless => UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) do
+  it 'cannot have all_disks and hash' do
+    pp = <<-EOS
+    class { 'green':
+      disk_all_disks => true,
+      disk_hash => { sda => 60 }
+    }
+    EOS
+    expect(apply_manifest(pp, :expect_failures => true).stderr).to match(/Cannot set green::disk_all_disks and green::disk_hash/i)
+  end
+  it 'iterates over hash' do
+    pp = <<-EOS
+    class { 'green':
+      disk_all_disks => false,
+      disk_hash => { sda => 60 }
+    }
+    EOS
+    apply_manifest(pp, :catch_failures => true)
   end
 
-  Array(powertop_packagename).each do |package|
-    describe package(package) do
-      it { should be_installed }
-    end
-  end
+
 end
