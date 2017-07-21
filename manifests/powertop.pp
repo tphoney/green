@@ -15,16 +15,5 @@ class green::powertop inherits green {
         returns => [0,1]
       }
     }
-
-    if $green::powertop_service_manage == true {
-      service { 'green':
-        ensure     => $green::powertop_service_ensure,
-        enable     => $green::powertop_service_enable,
-        name       => $green::powertop_service_name,
-        provider   => $green::powertop_service_provider,
-        hasstatus  => true,
-        hasrestart => true,
-      }
-    }
   }
 }
