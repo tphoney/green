@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-describe 'green::disk class', :unless => UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) do
+describe 'green::disk class', unless: UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) do
   it 'cannot have all_disks and hash' do
     pp = <<-EOS
     class { 'green':
@@ -8,7 +8,7 @@ describe 'green::disk class', :unless => UNSUPPORTED_PLATFORMS.include?(fact('os
       disk_hash => { sda => 60 }
     }
     EOS
-    expect(apply_manifest(pp, :expect_failures => true).stderr).to match(/Cannot set green::disk_all_disks and green::disk_hash/i)
+    expect(apply_manifest(pp, expect_failures: true).stderr).to match(%r{Cannot set green::disk_all_disks and green::disk_hash}i)
   end
   it 'iterates over hash' do
     pp = <<-EOS
@@ -17,8 +17,6 @@ describe 'green::disk class', :unless => UNSUPPORTED_PLATFORMS.include?(fact('os
       disk_hash => { sda => 60 }
     }
     EOS
-    apply_manifest(pp, :catch_failures => true)
+    apply_manifest(pp, catch_failures: true)
   end
-
-
 end

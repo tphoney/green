@@ -3,9 +3,9 @@
 class green::disk inherits green {
   if $green::disk_enable {
     if $green::disk_all_disks and !$green::disk_hash.empty {
-      fail("Cannot set green::disk_all_disks and green::disk_hash")
+      fail('Cannot set green::disk_all_disks and green::disk_hash')
     } elsif $green::disk_all_disks {
-      notice ("diskall")
+      notice ('diskall')
       #find all disks
       $disks = $facts['disks']
       $disks.each |$key, $value| {
@@ -18,7 +18,7 @@ class green::disk inherits green {
         }
       }
     } else {
-      notice ("diskhash")
+      notice ('diskhash')
       $green::disk_hash.each |$key, $value| {
         notice ( $key )
         $full = "/dev/${key}"
