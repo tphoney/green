@@ -5,8 +5,7 @@
   "summary": "Makes the world a better place through efficency.",
   "license": "Apache-2.0",
   "source": "https://github.com/tphoney/green",
-  "project_page": "dev/null",
-  "issues_url": "dev/null",
+  "homepage_url": "https://github.com/tphoney/green",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
