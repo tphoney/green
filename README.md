@@ -13,13 +13,6 @@ This module will tune a linux system to use the lowest amount of power. It will 
 * `green::disk`: This class handles harddisk power optimizations. Avoid modifying private classes.
 * `green::powertop`: This class handles powertop. Avoid modifying private classes.
 
-## Classes
-
-### green
-
-green
-
-Main class, includes all other classes.
 
 #### Parameters
 
@@ -84,73 +77,49 @@ Which service provider to use for Powertop. Default value: 'undef'.
 
 Data type: `Boolean`
 
-
-
 ##### `powertop_package_ensure`
 
 Data type: `String`
-
-
 
 ##### `powertop_package_manage`
 
 Data type: `Boolean`
 
-
-
 ##### `powertop_package_name`
 
 Data type: `Array[String]`
-
-
 
 ##### `powertop_service_enable`
 
 Data type: `Boolean`
 
-
-
 ##### `powertop_service_ensure`
 
 Data type: `Enum['running', 'stopped']`
-
-
 
 ##### `powertop_service_manage`
 
 Data type: `Boolean`
 
-
-
 ##### `powertop_service_name`
 
 Data type: `String`
-
-
 
 ##### `powertop_service_provider`
 
 Data type: `Optional[String]`
 
-
-
 ##### `disk_enable`
 
 Data type: `Boolean`
-
-
 
 ##### `disk_all_disks`
 
 Data type: `Boolean`
 
-
-
 ##### `disk_hash`
 
 Data type: `Hash[String, Integer]`
-
-
 
 ##### `disk_spindown`
 

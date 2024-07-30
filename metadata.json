@@ -1,11 +1,12 @@
 {
   "name": "tphoney-green",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "TP Honey",
   "summary": "Makes the world a better place through efficency.",
   "license": "Apache-2.0",
   "source": "https://github.com/tphoney/green",
-  "homepage_url": "https://github.com/tphoney/green",
+  "project_page": "https://github.com/tphoney/green/blob/master/README.md",
+  "issues_url": "https://github.com/tphoney/green/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
@@ -107,8 +108,9 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
+  "homepage_url": "https://github.com/tphoney/green",
   "description": "A module to configure various power setttings on the node.",
-  "pdk-version": "1.4.1",
-  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
-  "template-ref": "1.4.1-0-g52adbbb"
+  "pdk-version": "3.2.0",
+  "template-url": "pdk-default#3.2.0",
+  "template-ref": "tags/3.2.0-0-gb257ef1"
 }
