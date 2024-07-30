@@ -12,7 +12,7 @@ class green::powertop inherits green {
       exec { 'powertop_autotune':
         command => 'powertop --auto-tune',
         path    => ['/usr/bin', '/usr/sbin',],
-        returns => [0,1]
+        returns => [0,1],
       }
     }
   }

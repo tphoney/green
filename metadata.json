@@ -1,6 +1,6 @@
 {
   "name": "tphoney-green",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "TP Honey",
   "summary": "Makes the world a better place through efficency.",
   "license": "Apache-2.0",
@@ -13,7 +13,6 @@
       "version_requirement": ">= 4.6.0 < 5.0.0"
     }
   ],
-  "data_provider": "hiera",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -108,8 +107,6 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
-  "homepage_url": "https://github.com/tphoney/green",
-  "description": "A module to configure various power setttings on the node.",
   "pdk-version": "3.2.0",
   "template-url": "pdk-default#3.2.0",
   "template-ref": "tags/3.2.0-0-gb257ef1"

@@ -13,7 +13,6 @@ This module will tune a linux system to use the lowest amount of power. It will 
 * `green::disk`: This class handles harddisk power optimizations. Avoid modifying private classes.
 * `green::powertop`: This class handles powertop. Avoid modifying private classes.
 
-
 #### Parameters
 
 The following parameters are available in the `green` class.

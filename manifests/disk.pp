@@ -14,7 +14,7 @@ class green::disk inherits green {
         exec { "${full} timeout ${green::disk_spindown}":
           command => "hdparm -S ${full} ${green::disk_spindown}",
           path    => ['/usr/bin', '/sbin',],
-          returns => [0,1,22]
+          returns => [0,1,22],
         }
       }
     } else {
@@ -25,7 +25,7 @@ class green::disk inherits green {
         exec { "${full} timeout ${value}":
           command => "hdparm -S ${full} ${value}",
           path    => ['/usr/bin', '/sbin',],
-          returns => [0,1,22]
+          returns => [0,1,22],
         }
       }
     }
